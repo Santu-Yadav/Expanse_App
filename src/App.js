@@ -1,6 +1,6 @@
-import Expanses from "./Expanse/Expanse";
+import Expanses from "./component/Expanse/Expanses";
 
-function App() {
+const App = () => {
   const Expanse = [
     { title: "Car Insurance", amount: 294, date: new Date(2015, 5, 12) },
     { title: "School    ", amount: 800, date: new Date(2016, 9, 29) },
@@ -9,21 +9,7 @@ function App() {
 
   return (
     <div>
-      <Expanses
-        date={Expanse[0].date}
-        itenary={Expanse[0].title}
-        cost={Expanse[0].amount}
-      />
-      <Expanses
-        date={Expanse[1].date}
-        itenary={Expanse[1].title}
-        cost={Expanse[1].amount}
-      />
-      <Expanses
-        date={Expanse[2].date}
-        itenary={Expanse[2].title}
-        cost={Expanse[2].amount}
-      />
+      <Expanses Expanse={Expanse} />
     </div>
   );
 }
