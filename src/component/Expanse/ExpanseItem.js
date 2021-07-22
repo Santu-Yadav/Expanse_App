@@ -4,14 +4,17 @@ import "./ExpanseItem.css";
 import Card from "../UI/Card";
 
 const ExpanseItem = (props) => {
-  console.log(useState());
+  console.log(useState()); /* [undefined, ƒ]*/
+
+  const [title, setTitle] = useState(props.itenary);
+  /* const [title, setTitle] = [props.itenary, ƒ]
+     title = props.itenary
+     setTitle = ƒ // this is function
+  */
 
   function clickHandler() {
     setTitle("Updated!");
-    console.log(title);
   }
-
-  const [title, setTitle] = useState(props.itenary);
 
   return (
     <Card className="expense-item">
